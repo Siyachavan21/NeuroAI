@@ -1,0 +1,74 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1565C0;
+  padding: 20px 60px;
+  color: #FFFFFF;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Logo Styling */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #BBDEFB;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.logo-img {
+  height: 42px;
+  width: auto;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #E3F2FD;
+  font-weight: 500;
+  font-size: 1.05rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #90CAF9;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #BBDEFB;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+.nav-links a {
+  font-weight: bold;
+}
+
+/* Keyboard focus visibility */
+.nav-links a:focus-visible {
+  outline: 3px solid #FFEB3B;
+  outline-offset: 3px;
+}

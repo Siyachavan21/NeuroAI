@@ -1,0 +1,5 @@
+neutral
+36.34%
+0.3634
+0.3634
+Active (emotion_efficientnet.h5)

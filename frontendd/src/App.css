@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: #90CAF9;
+  scroll-behavior: smooth;
+  color: #0D47A1;
+}
+
+a {
+  text-decoration: none;
+  color: #BBDEFB;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #FFEB3B;
+}
+
+button {
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  background-color: #1565C0;
+  color: #E3F2FD;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0D47A1;
+  transform: translateY(-2px);
+}
+.app-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  text-align: justify;
+}
+
+.app-footer {
+  background: #6E8EDB;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 0;         /* Reduced vertical space */
+  font-size: 0.75rem;     /* Smaller text */
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  width: 100vw;
+  box-sizing: border-box;
+  position: relative;
+  left: 0;
+}
+
+/* Focus outlines for accessibility */
+a:focus-visible, button:focus-visible {
+  outline: 3px solid #FFEB3B;
+  outline-offset: 3px;
+}
+
+/* Auth modal minimal styles override with soft palette */
+.auth-modal-overlay .auth-modal h3 {
+  color: #0D47A1;
+}
+.auth-modal-overlay .auth-form input {
+  padding: 12px 14px;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  background: #FAFDFF;
+}
+.auth-modal-overlay .auth-actions button[type="submit"] {
+  background: #64B5F6;
+  color: #0D47A1;
+}
+
+
+

@@ -1,0 +1,49 @@
+.how-section {
+  padding: 50px 24px;
+  background: #F7FAFF;
+}
+
+.how-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.how-title {
+  text-align: center;
+  color: #0D47A1;
+  margin-bottom: 24px;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 900px) {
+  .how-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.how-card {
+  background: #FFFFFF;
+  border: 1px solid #D7E6FF;
+  border-radius: 12px;
+  padding: 16px;
+  color: #0D47A1;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.how-step {
+  margin: 0 0 6px 0;
+  color: #1565C0;
+}
+
+.how-text {
+  margin: 0;
+  color: #1565C0;
+  text-align: justify;
+}
+
+

@@ -1,0 +1,47 @@
+.overview-section {
+  padding: 60px 24px;
+  background: #F1F7FF;
+}
+
+.overview-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.overview-title {
+  color: #0D47A1;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.overview-subtitle {
+  color: #1565C0;
+  margin: 16px 0 10px 0;
+}
+
+.overview-abstract {
+  color: #1565C0;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  text-align: justify;
+}
+
+.overview-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.keyword-pill {
+  background: #EAF4FF;
+  color: #0D47A1;
+  border: 1px solid #90CAF9;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+}
+
+

@@ -1,0 +1,15 @@
+.app-footer {
+  background: linear-gradient(to right, #1976D2, #0D47A1);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0; /* Reduced vertical padding */
+  font-size: 0.8rem; /* Smaller text */
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  width: 100vw;
+  box-sizing: border-box;
+  position: relative;
+  left: 0;
+}

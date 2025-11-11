@@ -1,0 +1,364 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 40px 20px;
+  background: #EAF4FF;
+}
+
+.card-row {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Model Modal Styles */
+.model-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.model-modal-content {
+  background: white;
+  border-radius: 16px;
+  max-width: 95vw;
+  max-height: 95vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+/* Patient Form Integration */
+.patient-form-container {
+  margin: 32px 0;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.close-model-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+}
+
+.close-model-btn:hover {
+  background: #d32f2f;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(244, 67, 54, 0.4);
+}
+
+/* Responsive adjustments for modal */
+@media (max-width: 768px) {
+  .model-modal-overlay {
+    padding: 10px;
+  }
+  
+  .model-modal-content {
+    max-width: 100vw;
+    max-height: 100vh;
+    border-radius: 12px;
+  }
+  
+  .close-model-btn {
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+}
+
+/* Loading State */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  font-size: 1.2rem;
+  color: #1565C0;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 2px dashed #e3f2fd;
+}
+
+.loading::before {
+  content: '⏳';
+  margin-right: 12px;
+  font-size: 1.5rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Model Page Styles */
+.model-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Ensure proper spacing between sections */
+.model-page > * {
+  margin-bottom: 32px;
+}
+
+.model-page > *:last-child {
+  margin-bottom: 0;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 40px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e3f2fd 100%);
+  border-radius: 16px;
+  border: 1px solid #e3f2fd;
+}
+
+.page-header h1 {
+  margin: 0 0 16px 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0D47A1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.page-header p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #1565C0;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.model-description {
+  margin-bottom: 40px;
+}
+
+.description-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e3f2fd;
+}
+
+.description-card h3 {
+  margin: 0 0 20px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0D47A1;
+  border-bottom: 2px solid #e3f2fd;
+  padding-bottom: 12px;
+}
+
+.description-card p {
+  margin: 0 0 24px 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #1565C0;
+}
+
+.model-features h4 {
+  margin: 0 0 16px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0D47A1;
+}
+
+.model-features ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style: none;
+}
+
+.model-features li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+  color: #1565C0;
+  font-size: 1rem;
+}
+
+.model-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.model-info-section {
+  margin: 40px 0;
+}
+
+.model-info-section h3 {
+  text-align: center;
+  margin: 0 0 32px 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #0D47A1;
+}
+
+.workflow-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.step {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e3f2fd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0 auto 16px auto;
+}
+
+.step h4 {
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0D47A1;
+}
+
+.step p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #1565C0;
+  line-height: 1.5;
+}
+
+/* Responsive Design for Model Page */
+@media (max-width: 1200px) {
+  .model-page {
+    padding: 0 16px;
+  }
+  
+  .workflow-steps {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .model-page {
+    padding: 0 12px;
+  }
+  
+  .page-header {
+    padding: 24px 16px;
+    margin-bottom: 24px;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .page-header p {
+    font-size: 1rem;
+  }
+  
+  .description-card {
+    padding: 24px 16px;
+    margin-bottom: 24px;
+  }
+  
+  .workflow-steps {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 100%;
+  }
+  
+  .step {
+    padding: 20px 16px;
+  }
+  
+  .model-page > * {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .model-page {
+    padding: 0 8px;
+  }
+  
+  .page-header {
+    padding: 20px 12px;
+  }
+  
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .description-card {
+    padding: 20px 12px;
+  }
+  
+  .step {
+    padding: 16px 12px;
+  }
+  
+  .model-page > * {
+    margin-bottom: 20px;
+  }
+}
