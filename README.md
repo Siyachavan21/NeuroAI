@@ -1,18 +1,49 @@
-🧠 NeuroAI — EEG-Based Emotion & Cognitive State Prediction
+🧠 NeuroAI — Personalized EEG-Based Cognitive & Emotional State Prediction for ASD
 
-NeuroAI is an advanced AI-powered assistive system designed to analyze and predict cognitive and emotional states of individuals with Autism Spectrum Disorder (ASD) using EEG (Electroencephalography) data.
-The project uses Deep Learning (CNN + LSTM) to classify emotions such as happiness, anxiety, stress, and confusion from EEG brainwave signals.
+The rising global incidence of Autism Spectrum Disorder (ASD) has created a growing demand for innovative assistive technologies that can support the cognitive and emotional development of neurodiverse individuals. During our exploration of neurotechnology and machine learning, we identified a significant gap in real-time monitoring and interpretation of emotional and cognitive states in individuals with ASD. Existing systems often lack personalization, adaptability, and the ability to understand the unique neurological patterns associated with ASD.
 
-🚀 Features
+NeuroAI was developed to address this challenge — a non-invasive, AI-powered platform designed to analyze and predict cognitive and emotional states using EEG (Electroencephalography) data. The system integrates two major modules:
 
-📡 EEG Signal Preprocessing
-Noise removal, filtering, normalization, segmentation.
+🔹 Core Modules
+🧠 Cognitive State Monitoring
 
-🧬 Deep Learning Models
-CNN for spatial features + LSTM for temporal patterns.
+Evaluates mental conditions such as:
+Focus
+Stress
+Relaxation
+Cognitive load
+Deep learning models identify subtle EEG patterns associated with different cognitive states.
 
-🧠 Emotion Classification
-Predicts states like: happiness, anxiety, stress, confusion, low attention.
+😊 Emotion Recognition
+
+Classifies emotional states using CNN + LSTM architectures:
+Happiness
+Anxiety
+Frustration
+Calmness
+Low attention
+
+🎯 Therapy Response Prediction
+
+One of NeuroAI’s unique features is identifying whether an individual is a responder or non-responder to therapeutic interventions.
+This enables adaptive personalization where the system recommends:
+Relaxation techniques
+Mindfulness exercises
+Focus-enhancing activities
+Stress reduction tasks
+These personalized suggestions help clinicians and caregivers choose effective therapy strategies.
+
+📡 Real-Time Brain-State Feedback
+NeuroAI provides real-time insights through an intuitive dashboard, making it a valuable tool for:
+Clinicians
+Therapists
+Caregivers
+Individuals with ASD
+By delivering continuous, data-driven feedback, NeuroAI enhances therapy effectiveness and promotes emotional self-awareness.
+
+📌 Keywords
+
+EEG-based Cognitive Analysis, Autism Spectrum Disorder (ASD), Emotion Recognition, Machine Learning, Deep Learning, Cognitive State Monitoring, Personalized Treatment, NeuroAI, Predictive Modelling, Real-time Emotion Regulation
 
 📂 Project Structure
 NeuroAI/
@@ -23,7 +54,7 @@ NeuroAI/
 │   ├── model.py             # CNN + LSTM model training
 │   ├── inference.py         # Prediction script
 │   ├── utils.py             # Helper functions
-│── dashboard/               # Streamlit / custom dashboard
+│── dashboard/               # Interface / visualization
 │── requirements.txt         # Dependencies
 │── README.md                # Documentation
 
@@ -35,7 +66,7 @@ cd NeuroAI
 2️⃣ Install dependencies
 pip install -r requirements.txt
 
-▶️ How to Use
+▶️ Usage
 🔹 Train the model
 python src/model.py
 🔹 Run prediction
@@ -44,16 +75,17 @@ python src/inference.py --file sample_eeg.csv
 streamlit run dashboard/app.py
 
 🧪 Models Used
-EfficientNetB4
-ResNet50
-CNN Layers
+CNN
 LSTM / Bi-LSTM
-BatchNorm, Dropout, Dense Layers
+EfficientNetB4 (optional)
+ResNet50 (optional)
+BatchNorm, Dropout, Dense layers
 
 📈 Results
-High accuracy in multi-class emotion prediction
-Transfer learning improved performance
-Stable predictions across subjects
+Accurate classification of emotional and cognitive states
+Personalized therapy response prediction
+Data-driven activity recommendations
+Enhanced support for ASD therapy and regulation
 
 👩‍💻 Author
 Siya Chavan
